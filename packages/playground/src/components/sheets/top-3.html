@@ -1,0 +1,34 @@
+<div class="sheet sheet-top [--sheet-handle:1.5em] [--sheet-trans-closed:translateY(calc(-100%_+_var(--sheet-handle)))] [--sheet-trans-half:translateY(calc(-100%_+_10rem))] [--sheet-trans-full:translateY(0)] [--sheet-half:10rem]">
+    <input type="radio" name="three-state-top-sheet" id="three-state-top-sheet-closed" class="sheet-radio-closed" checked />
+    <input type="radio" name="three-state-top-sheet" id="three-state-top-sheet-half" class="sheet-radio-half" />
+    <input type="radio" name="three-state-top-sheet" id="three-state-top-sheet-full" class="sheet-radio-full" />
+
+    <label class="sheet-backdrop bg-neutral/20" for="three-state-top-sheet-closed"></label>
+
+  <div class="sheet-panel">
+
+    <div class="sheet-spacer-closed"></div>
+    <div class="sheet-spacer-half"></div>
+
+    <div class="sheet-content top-0 bg-neutral text-neutral-content">
+      <div class="sheet-handle">
+        <div class="h-1.5 w-12 rounded-full bg-neutral-content/90"></div>
+
+        <label class="sheet-toggle-to-half sheet-toggle" for="three-state-top-sheet-half"></label>
+        <label class="sheet-toggle-to-full sheet-toggle" for="three-state-top-sheet-full"></label>
+        <label class="sheet-toggle-to-closed sheet-toggle" for="three-state-top-sheet-closed"></label>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-6">
+        <p>Some more content</p>
+        <p>Some more content</p>
+        <p>Some more content</p>
+        <p class="mb-6">Some more content</p>
+        <h2 class="mb-4 text-xl font-bold">Top sheet (3 states)</h2>
+        <p>This is a top sheet with 3 states.</p>
+        <p>Click the handle to switch between closed, half and full states.</p>
+      </div>
+    </div>
+  
+  </div>
+</div>

@@ -10,23 +10,26 @@
 
     @apply pointer-events-none fixed inset-0 z-50 flex overscroll-none;
 
-    scroll-timeline-name: --sheet-scroll;
-
     @media (hover: none) and (pointer: coarse) {
-      @apply overflow-auto;
+      @apply overflow-hidden;
 
-      scroll-timeline-axis: var(--sheet-snap-axis);
-      scroll-snap-type: var(--sheet-snap-axis) mandatory;
-      scrollbar-width: none;
-      transition: pointer-events 0s 0.6s;
+      .sheet-panel {
+        @apply pointer-events-none absolute inset-0 flex overflow-auto overscroll-none;
+        transition: pointer-events 0s 0.6s;
 
-      &::-webkit-scrollbar {
-        @apply hidden;
-      }
+        scroll-timeline-name: --sheet-scroll;
+        scroll-timeline-axis: var(--sheet-snap-axis);
+        scroll-snap-type: var(--sheet-snap-axis) mandatory;
+        scrollbar-width: none;
 
-      &:has(:active, :hover) {
-        @apply pointer-events-auto;
-        transition: pointer-events 0s 0s;
+        &::-webkit-scrollbar {
+          @apply hidden;
+        }
+
+        &:has(:active, :hover) {
+          @apply pointer-events-auto;
+          transition: pointer-events 0s 0s;
+        }
       }
 
       .sheet-spacer-closed,
@@ -34,10 +37,26 @@
         @apply pointer-events-none shrink-0;
         scroll-snap-align: var(--sheet-snap-align);
       }
+
+      @supports (animation-timeline: scroll()) {
+        timeline-scope: --sheet-scroll;
+
+        .sheet-panel {
+          @apply pointer-events-auto;
+
+          clip-path: var(--sheet-clip-closed);
+          animation: sheet-clip 0.5s linear both;
+          animation-timeline: --sheet-scroll;
+        }
+      }
     }
 
     @media (hover: hover) and (pointer: fine) {
       @apply overflow-hidden;
+
+      .sheet-panel {
+        @apply contents;
+      }
 
       .sheet-spacer-closed,
       .sheet-spacer-half {
@@ -163,11 +182,14 @@
     --sheet-full: 100dvh;
     --sheet-snap-axis: y;
     --sheet-snap-align: start;
+    --sheet-clip-closed: inset(calc(100% - var(--sheet-handle)) 0 0 0);
     --sheet-trans-closed: translateY(calc(100dvh - var(--sheet-handle)));
     --sheet-trans-half: translateY(calc(100dvh - var(--sheet-half) - var(--sheet-handle)));
     --sheet-trans-full: translateY(calc(100dvh - 100%));
 
-    @apply flex-col;
+    .sheet-panel {
+      @apply flex-col;
+    }
 
     .sheet-content {
       @apply rounded-t-box w-full flex-col;
@@ -195,11 +217,19 @@
     --sheet-full: 100dvh;
     --sheet-snap-axis: y;
     --sheet-snap-align: end;
+    --sheet-clip-closed: inset(0 0 calc(100% - var(--sheet-handle)) 0);
     --sheet-trans-closed: translateY(calc(-100dvh + var(--sheet-handle)));
     --sheet-trans-half: translateY(calc(-100dvh + var(--sheet-half) + var(--sheet-handle)));
     --sheet-trans-full: translateY(calc(-100dvh + 100%));
 
-    @apply flex-col-reverse;
+    .sheet-panel {
+      @apply flex-col-reverse;
+
+      /* WebKit drives scroll timelines on reversed-flex scrollers in reverse */
+      @supports (font: -apple-system-body) {
+        animation-direction: reverse;
+      }
+    }
 
     .sheet-content {
       @apply rounded-b-box w-full flex-col-reverse;
@@ -227,11 +257,14 @@
     --sheet-full: 100%;
     --sheet-snap-axis: x;
     --sheet-snap-align: start;
+    --sheet-clip-closed: inset(0 0 0 calc(100% - var(--sheet-handle)));
     --sheet-trans-closed: translateX(calc(100% - var(--sheet-handle)));
     --sheet-trans-half: translateX(calc(100% - var(--sheet-half) - var(--sheet-handle)));
     --sheet-trans-full: translateX(0);
 
-    @apply flex-row;
+    .sheet-panel {
+      @apply flex-row;
+    }
 
     @media (min-width: 40rem) {
       --sheet-full: 400px;
@@ -271,11 +304,19 @@
     --sheet-full: 100%;
     --sheet-snap-axis: x;
     --sheet-snap-align: end;
+    --sheet-clip-closed: inset(0 calc(100% - var(--sheet-handle)) 0 0);
     --sheet-trans-closed: translateX(calc(-100% + var(--sheet-handle)));
     --sheet-trans-half: translateX(calc(-100% + var(--sheet-half) + var(--sheet-handle)));
     --sheet-trans-full: translateX(0);
 
-    @apply flex-row-reverse;
+    .sheet-panel {
+      @apply flex-row-reverse;
+
+      /* WebKit drives scroll timelines on reversed-flex scrollers in reverse */
+      @supports (font: -apple-system-body) {
+        animation-direction: reverse;
+      }
+    }
 
     @media (min-width: 40rem) {
       --sheet-full: 400px;
@@ -306,6 +347,16 @@
     .sheet-spacer-half {
       inline-size: calc(100% - var(--sheet-half));
     }
+  }
+}
+
+@keyframes sheet-clip {
+  from {
+    clip-path: var(--sheet-clip-closed);
+  }
+
+  to {
+    clip-path: inset(0);
   }
 }
 

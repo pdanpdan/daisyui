@@ -1,0 +1,294 @@
+<div class="page h-[200vh] overflow-auto bg-base-100 p-15">
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+  <p>Some content</p>
+</div>
+
+<div class="peer fixed start-1/2 top-1/2 join -translate-x-1/2 -translate-y-1/2">
+  <input class="btn join-item" type="radio" name="position" value="bottom" aria-label="Bottom" checked />
+  <input class="btn join-item" type="radio" name="position" value="top" aria-label="Top" />
+  <input class="btn join-item" type="radio" name="position" value="start" aria-label="Start" />
+  <input class="btn join-item" type="radio" name="position" value="end" aria-label="End" />
+</div>
+
+<div class="sheet sheet-bottom [--sheet-handle:40px] [--sheet-full:95dvh] peer-not-has-[[value='bottom']:checked]:hidden">
+  <input type="radio" name="bottom1-sheet" id="bottom1-sheet-closed" class="sheet-radio-closed" checked />
+  <input type="radio" name="bottom1-sheet" id="bottom1-sheet-half" class="sheet-radio-half" />
+  <input type="radio" name="bottom1-sheet" id="bottom1-sheet-full" class="sheet-radio-full" />
+
+  <label class="sheet-backdrop" for="bottom1-sheet-closed"></label>
+
+  <div class="sheet-panel">
+    <div class="sheet-spacer-closed"></div>
+    <div class="sheet-spacer-half"></div>
+
+    <div class="sheet-content pointer-events-none">
+      <div class="sheet-handle relative w-30 start-1/3 -translate-x-1/2 bg-primary text-primary-content pointer-events-auto">
+        <div class="text-center font-bold">A</div>
+
+        <label class="sheet-toggle-to-half sheet-toggle" for="bottom1-sheet-half"></label>
+        <label class="sheet-toggle-to-full sheet-toggle" for="bottom1-sheet-full"></label>
+        <label class="sheet-toggle-to-closed sheet-toggle" for="bottom1-sheet-closed"></label>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-6 bg-base-200 rounded-t-box pointer-events-auto">
+        <h2 class="mb-4 text-2xl font-bold">Bottom Sheet (3 pos)</h2>
+        <div class="space-y-6">
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sheet sheet-bottom [--sheet-handle:40px] [--sheet-half:20dvh] [--sheet-full:50dvh] peer-not-has-[[value='bottom']:checked]:hidden">
+  <input type="radio" name="bottom2-sheet" id="bottom2-sheet-closed" class="sheet-radio-closed" checked />
+  <input type="radio" name="bottom2-sheet" id="bottom2-sheet-half" class="sheet-radio-half" />
+  <input type="radio" name="bottom2-sheet" id="bottom2-sheet-full" class="sheet-radio-full" />
+
+  <label class="sheet-backdrop" for="bottom2-sheet-closed"></label>
+
+  <div class="sheet-panel">
+    <div class="sheet-spacer-closed"></div>
+    <div class="sheet-spacer-half"></div>
+
+    <div class="sheet-content pointer-events-none">
+      <div class="sheet-handle relative w-30 start-2/3 -translate-x-1/2 bg-secondary text-secondary-content pointer-events-auto">
+        <div class="text-center font-bold">B</div>
+
+        <label class="sheet-toggle-to-half sheet-toggle" for="bottom2-sheet-half"></label>
+        <label class="sheet-toggle-to-full sheet-toggle" for="bottom2-sheet-full"></label>
+        <label class="sheet-toggle-to-closed sheet-toggle" for="bottom2-sheet-closed"></label>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-6 bg-base-200 rounded-t-box pointer-events-auto">
+        <h2 class="mb-4 text-2xl font-bold">Bottom Sheet (3 pos)</h2>
+        <div class="space-y-6">
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sheet sheet-top [--sheet-half:20dvh] peer-not-has-[[value='top']:checked]:hidden">
+  <input type="radio" name="top-sheet" id="top-sheet-closed" class="sheet-radio-closed" checked />
+  <input type="radio" name="top-sheet" id="top-sheet-half" class="sheet-radio-half" />
+  <input type="radio" name="top-sheet" id="top-sheet-full" class="sheet-radio-full" />
+
+  <label class="sheet-backdrop" for="top-sheet-closed"></label>
+
+  <div class="sheet-panel">
+    <div class="sheet-spacer-closed"></div>
+    <div class="sheet-spacer-half"></div>
+
+    <div class="sheet-content bg-base-200">
+      <div class="sheet-handle">
+        <div class="h-1.5 w-12 rounded-full bg-base-content/30"></div>
+
+        <label class="sheet-toggle-to-half sheet-toggle" for="top-sheet-half"></label>
+        <label class="sheet-toggle-to-full sheet-toggle" for="top-sheet-full"></label>
+        <label class="sheet-toggle-to-closed sheet-toggle" for="top-sheet-closed"></label>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-6">
+        <h2 class="mb-4 text-2xl font-bold">Top Sheet (3 pos)</h2>
+        <div class="space-y-6">
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sheet sheet-start [--sheet-half:70px] [--sheet-handle:30px] peer-not-has-[[value='start']:checked]:hidden">
+  <input type="radio" name="start-sheet" id="start-sheet-closed" class="sheet-radio-closed" checked />
+  <input type="radio" name="start-sheet" id="start-sheet-half" class="sheet-radio-half" />
+  <input type="radio" name="start-sheet" id="start-sheet-full" class="sheet-radio-full" />
+
+  <label class="sheet-backdrop" for="start-sheet-closed"></label>
+
+  <div class="sheet-panel">
+    <div class="sheet-spacer-closed"></div>
+    <div class="sheet-spacer-half"></div>
+
+    <div class="sheet-content bg-primary text-primary-content">
+      <div class="sheet-handle border-e border-primary/60 bg-primary">
+        <div class="h-12 w-1.5 rounded-full bg-primary-content"></div>
+
+        <label class="sheet-toggle-to-half sheet-toggle" for="start-sheet-half"></label>
+        <label class="sheet-toggle-to-full sheet-toggle" for="start-sheet-full"></label>
+        <label class="sheet-toggle-to-closed sheet-toggle" for="start-sheet-closed"></label>
+      </div>
+
+      <div class="flex flex-1 items-start gap-2">
+        <div class="max-h-full flex-1 overflow-y-auto p-6">
+          <h2 class="mb-4 text-2xl font-bold">Start Sidebar (2 pos)</h2>
+          <div class="space-y-6">
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+            <p>Some sheet content</p>
+          </div>
+        </div>
+
+        <div class="max-h-full flex flex-col space-y-6 overflow-y-auto px-2 py-6">
+          <button class="btn-round btn">A</button>
+          <button class="btn-round btn">B</button>
+          <button class="btn-round btn">C</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sheet sheet-end peer-not-has-[[value='end']:checked]:hidden">
+  <input type="radio" name="end-sheet" id="end-sheet-closed" class="sheet-radio-closed" checked />
+  <input type="radio" name="end-sheet" id="end-sheet-full" class="sheet-radio-full" />
+
+  <label class="sheet-backdrop glass" for="end-sheet-closed"></label>
+
+  <div class="sheet-panel">
+    <div class="sheet-spacer-closed"></div>
+
+    <div class="sheet-content bg-secondary text-secondary-content">
+      <div class="sheet-handle border-s border-secondary/60 bg-secondary">
+        <div class="h-12 w-1.5 rounded-full bg-secondary-content"></div>
+
+        <label class="sheet-toggle-to-full sheet-toggle" for="end-sheet-full"></label>
+        <label class="sheet-toggle-to-closed sheet-toggle" for="end-sheet-closed"></label>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-6">
+        <h2 class="mb-4 text-2xl font-bold">End Sidebar (2 pos)</h2>
+        <div class="space-y-6">
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+          <p>Some sheet content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

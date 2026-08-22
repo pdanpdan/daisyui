@@ -1,0 +1,28 @@
+<div class="sheet sheet-end [--sheet-handle:1.5em] [--sheet-full:80%] sm:[--sheet-full:400px]">
+    <input type="radio" name="end-sheet" id="end-sheet-closed" class="sheet-radio-closed" checked />
+    <input type="radio" name="end-sheet" id="end-sheet-full" class="sheet-radio-full" />
+
+    <label class="sheet-backdrop bg-neutral/20" for="end-sheet-closed"></label>
+
+  <div class="sheet-panel">
+
+    <div class="sheet-spacer-closed"></div>
+
+    <div class="sheet-content h-full bg-neutral text-neutral-content">
+      <div class="sheet-handle">
+        <div class="h-12 w-1.5 rounded-full bg-neutral-content/90"></div>
+
+        <label class="sheet-toggle-to-full sheet-toggle" for="end-sheet-full"></label>
+        <label class="sheet-toggle-to-closed sheet-toggle" for="end-sheet-closed"></label>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-6">
+        <h2 class="mb-4 text-xl font-bold">End sheet</h2>
+        <p>This is an end sheet.</p>
+        <p>It slides in from the end edge of the screen.</p>
+        <p>Click the handle to open or close it on desktop, or slide it on mobile devices.</p>
+      </div>
+    </div>
+  
+  </div>
+</div>

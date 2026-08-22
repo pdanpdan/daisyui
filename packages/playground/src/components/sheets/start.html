@@ -1,0 +1,28 @@
+<div class="sheet sheet-start [--sheet-handle:1.5em] [--sheet-full:80%] sm:[--sheet-full:400px]">
+    <input type="radio" name="start-sheet" id="start-sheet-closed" class="sheet-radio-closed" checked />
+    <input type="radio" name="start-sheet" id="start-sheet-full" class="sheet-radio-full" />
+
+    <label class="sheet-backdrop bg-neutral/20" for="start-sheet-closed"></label>
+
+  <div class="sheet-panel">
+
+    <div class="sheet-spacer-closed"></div>
+
+    <div class="sheet-content h-full bg-neutral text-neutral-content">
+      <div class="sheet-handle">
+        <div class="h-12 w-1.5 rounded-full bg-neutral-content/90"></div>
+
+        <label class="sheet-toggle-to-full sheet-toggle" for="start-sheet-full"></label>
+        <label class="sheet-toggle-to-closed sheet-toggle" for="start-sheet-closed"></label>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-6">
+        <h2 class="mb-4 text-xl font-bold">Start sheet</h2>
+        <p>This is a start sheet.</p>
+        <p>It slides in from the start edge of the screen.</p>
+        <p>Click the handle to open or close it on desktop, or slide it on mobile devices.</p>
+      </div>
+    </div>
+  
+  </div>
+</div>
